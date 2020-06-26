@@ -27,8 +27,16 @@
 	</p>
 	
 	<hr>
+	  <p>
+	    <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a> (Only only for Manager Peeps)
+	  </p>
+	<hr>
 	
-	
+	<hr>
+	  <p>
+	    <a href="${pageContext.request.contextPath}/systems">IT systems Meeting</a> (Only only for Admin Peeps)
+	  </p>
+	<hr>
 	<!-- Add a logout button -->
 	<form:form action="${pageContext.request.contextPath}/logout" 
 			   method="POST">

@@ -18,15 +18,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		//add our users for in memory authentication
 		UserBuilder user = User.withDefaultPasswordEncoder();
 		
-		auth.inMemoryAuthentication().withUser(user.username("ngocnano").password("123456").roles("manager"))
-		                             .withUser(user.username("jame").password("123456").roles("ad"))
-		                             .withUser(user.username("hulu").password("123456").roles("emmployee"));
+		auth.inMemoryAuthentication().withUser(user.username("ngocnano").password("123456").roles("manager","employee"))
+		                             .withUser(user.username("jame").password("123456").roles("ad","employee"))
+		                             .withUser(user.username("hulu").password("123456").roles("employee"));
 		
 	}
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().anyRequest().authenticated()
+		http.authorizeRequests()
+		     .antMatchers("/").hasRole("employee")
+		     .antMatchers("/leaders/**").hasRole("manager")
+		     .antMatchers("/systems/**").hasRole("ad")
 		     .and()
 		     .formLogin()
 		     .loginPage("/showMyLoginPage")

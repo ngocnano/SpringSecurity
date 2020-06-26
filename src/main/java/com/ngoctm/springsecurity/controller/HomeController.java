@@ -11,4 +11,19 @@ public class HomeController {
 		
 		return "index";
 	}
+	
+	
+	// add request maping for /leaders
+	@GetMapping("/leaders")
+	public String goLeaderPage() {
+		
+		return "leader";
+	}
+	
+	// add request maping for /systems
+	@GetMapping("/systems")
+	public String goAdminPage() {
+		
+		return "leader";
+	}
 }

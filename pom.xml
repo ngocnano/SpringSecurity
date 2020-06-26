@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ngoctm</groupId>
-	<artifactId>SecFix</artifactId>
+	<artifactId>spring-security-demo</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
@@ -80,7 +80,7 @@
 	<!-- TO DO: Add support for Maven WAR Plugin -->
 
 	<build>
-		<finalName>SecFix</finalName>
+		<finalName>spring-security-demo</finalName>
 	
 		<pluginManagement>
 			<plugins>
