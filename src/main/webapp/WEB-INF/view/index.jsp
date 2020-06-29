@@ -27,16 +27,19 @@
 	</p>
 	
 	<hr>
+	<sec:authorize access="hasRole('manager')">
 	  <p>
 	    <a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a> (Only only for Manager Peeps)
 	  </p>
 	<hr>
-	
+	</sec:authorize>
 	<hr>
+	<sec:authorize access="hasRole('ad')">
 	  <p>
 	    <a href="${pageContext.request.contextPath}/systems">IT systems Meeting</a> (Only only for Admin Peeps)
 	  </p>
 	<hr>
+	</sec:authorize>
 	<!-- Add a logout button -->
 	<form:form action="${pageContext.request.contextPath}/logout" 
 			   method="POST">
