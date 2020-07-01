@@ -10,8 +10,8 @@
 	<name>spring-security-demo</name>
 
 	<properties>
-		<springframework.version>5.0.2.RELEASE</springframework.version>
-		<springsecurity.version>5.0.0.RELEASE</springsecurity.version>
+		<springframework.version>5.0.17.RELEASE</springframework.version>
+		<springsecurity.version>5.0.17.RELEASE</springsecurity.version>
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
-			<version>0.9.5.2</version>
+			<version>0.9.5.4</version>
 		</dependency>
 
 
