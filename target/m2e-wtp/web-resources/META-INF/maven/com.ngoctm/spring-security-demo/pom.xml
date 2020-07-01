@@ -11,11 +11,8 @@
 
 	<properties>
 		<springframework.version>5.0.17.RELEASE</springframework.version>
-<<<<<<< HEAD
 		<springsecurity.version>5.0.17.RELEASE</springsecurity.version>
-=======
-		<springsecurity.version>5.0.0.RELEASE</springsecurity.version>
->>>>>>> eaf7ef9dcf6e5c11a162a1cc294002982c9602b8
+
 
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
