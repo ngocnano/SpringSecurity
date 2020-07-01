@@ -54,12 +54,13 @@ public class AppConfig {
 	
 	//define bean for security datasource
 	@Bean
-	private DataSource dataSource() {
+	public DataSource securityDataSource() {
 		
 		// log
 		logger.info("prop " + env.getProperty("jdbc.user"));
 		logger.info("prop " + env.getProperty("jdbc.password"));
 		
+		System.out.println(env.getProperty("jdbc.user") + env.getProperty("jdbc.password") + env.getProperty("jdbc.url"));
 		//create connection pool
 		ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
 		
@@ -73,7 +74,7 @@ public class AppConfig {
 		
 		// set database connection prop
 		comboPooledDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
-		comboPooledDataSource.setUser(env.getProperty("jdbc.url"));
+		comboPooledDataSource.setUser(env.getProperty("jdbc.user"));
 		comboPooledDataSource.setPassword(env.getProperty("jdbc.password"));
 		// set connection pool prop
 		comboPooledDataSource.setInitialPoolSize(getIntProp("connection.pool.initialPoolSize"));
